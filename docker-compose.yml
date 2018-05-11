@@ -1,0 +1,9 @@
+version: '2.3'
+services:
+  gpu:
+    build: ./docker/gpu
+    runtime: nvidia
+    command: /bin/bash
+    working_dir: /usr/local/src/keras-project
+    volumes:
+      - .:/usr/local/src/keras-project
