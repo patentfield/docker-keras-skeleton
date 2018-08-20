@@ -7,3 +7,16 @@ services:
     working_dir: /usr/local/src/keras-project
     volumes:
       - .:/usr/local/src/keras-project
+    environment:
+      LANG: "C.UTF-8"
+      LC_ALL: "C.UTF-8"
+  gpu-cuda-8:
+    build: ./docker/gpu-cuda-8
+    runtime: nvidia
+    command: /bin/bash
+    working_dir: /usr/local/src/keras-project
+    volumes:
+      - .:/usr/local/src/keras-project
+    environment:
+      LANG: "C.UTF-8"
+      LC_ALL: "C.UTF-8"
